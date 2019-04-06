@@ -5,7 +5,7 @@ Create an agent using Reinforcement learning to control a robotic arm
 
 This project aims to create an agent that control a robotic arm. Goal is to let this double jointed robotic arm is maintain contact with the green sphere. Reward of +0.1 is awarded for each timestep that the robotic arm is on the green sphere. Agent needs to collect a reward of +30 for 100 consecutive episodes for the environment to be considered solved.  
 
-![Robot Arm](https://github.com/amithmp/Reinforcement-Learning---Continuous-Control/blob/master/images/reacher.gif)
+![Robot Arm](https://github.com/amithmp/Reinforcement-Learning---Continuous-Control/blob/master/reacher.gif)
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
