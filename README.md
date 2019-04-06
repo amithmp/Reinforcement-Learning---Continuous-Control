@@ -37,7 +37,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 Agent is created using the DDPG (Deep Deterministic Policy Gradient) suitable for stochastic and continuous action spaces. This agent could solve the environment in 36 episodes as below
 
-![Robot Arm](https://github.com/amithmp/Reinforcement-Learning---Continuous-Control/blob/master/Result chart.jpeg)
+![Robot Arm](https://github.com/amithmp/Reinforcement-Learning---Continuous-Control/blob/master/Result_chart.jpg)
 
 ## Algorithm and Hyperparameters
 
