@@ -32,3 +32,18 @@ The observation space consists of 33 variables corresponding to position, rotati
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
+# Solution 
+
+
+Agent is created using the DDPG (Deep Deterministic Policy Gradient) suitable for stochastic and continuous action spaces. This agent could solve the environment in _ episodes as below
+
+## Algorithm and Hyperparameters
+
+This agent uses 2-layer LSTM network for both actor and critic. LSTM is chosen with the intuition that ideal action of the  agent depends on the previous action, state etc and LSTM is good to represent temporal sequences. Number of neurons is set to 256 to learn complex representation and relationship among dimensions of the state. 
+
+**Learning Method**: Both actor and critic are set to learn (i.e. network is updated) every 50 timesteps. Each learning step involves 5 epochs.
+
+**Learning Rate**: Learning rate is chosen to 1e-3 for the actor and 3e-3 after multiple experiments. Further, learn rate scheduler is used wherein the learning rate decays by a factor of 0.1 at each epoch. 
+
+**Optimizer**: RMRPROP is used after trying ADAM initially. RMSPROP is found to be suitable for RNNs in many cases.
+
