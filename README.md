@@ -45,7 +45,7 @@ This agent uses 2-layer LSTM network for both actor and critic. LSTM is chosen w
 
 **Learning Method**: Both actor and critic are set to learn (i.e. network is updated) every 50 timesteps. Each learning step involves 5 epochs.
 
-**Learning Rate**: Learning rate is chosen to 1e-3 for the actor and 3e-3 after multiple experiments. Further, learn rate scheduler is used wherein the learning rate decays by a factor of 0.1 at each epoch. 
+**Learning Rate**: Learning rate is chosen to 1e-3 for the actor and 3e-3 for the critic network after multiple experiments. Further, learning rate scheduler is used wherein the learning rate decays by a factor of 0.1 at each epoch. 
 
 **Optimizer**: RMSPROP is used after trying ADAM initially. RMSPROP is found to be suitable for RNNs in many cases.
 
